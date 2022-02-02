@@ -18,3 +18,8 @@ else
 fi
 
 grub-mkconfig -o /boot/grub/grub.cfg
+
+# Set hardware clock from system clock
+hwclock --systohc
+# To list the timezones: `timedatectl list-timezones`
+timedatectl set-timezone "US/Mountain"
