@@ -15,6 +15,8 @@ Are you sure?" 15 60 || exit
 dialog --no-cancel --inputbox "Enter a name for your computer." \
 10 60 2> comp
 
+comp=$(cat comp) && rm comp
+
 # Verify boot (UEFI or BIOS)
 uefi=0
 ls /sys/firmware/efi/efivars 2> /dev/null && uefi=1
@@ -121,3 +123,7 @@ if [ "$uefi" = 1 ]; then
     mkdir -p /mnt/boot/efi
     mount "${hd}1" /mnt/boot/efi
 fi
+
+# Install Arch Linux!
+pacstrap /mnt base base-devel linux linux-firmware
+genfstab -U /mnt >> /mnt/etc/fstab
