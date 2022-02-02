@@ -23,3 +23,9 @@ grub-mkconfig -o /boot/grub/grub.cfg
 hwclock --systohc
 # To list the timezones: `timedatectl list-timezones`
 timedatectl set-timezone "US/Mountain"
+
+# Set locale.gen and locale.conf
+# List available locales with `cat /etc/locale.gen`
+echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
+locale-gen
+echo "LANG=en_US.UTF-8" > /etc/locale.conf
