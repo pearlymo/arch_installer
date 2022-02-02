@@ -74,3 +74,37 @@ function eraseDisk() {
 }
 
 eraseDisk "$hderaser"
+
+boot_partition_type=1
+[[ "$uefi" == 0 ]] && boot_partition_type=4
+
+# Create the partitions
+
+#g - create non empty GPT partition table
+#n - create new partition
+#p - primary partition
+#e - extended partition
+#w - write the table to disk and exit
+
+partprobe "$hd"
+
+fdisk "$hd" << EOF
+g
+n
+
+
++512M
+t
+$boot_partition_type
+n
+
+
++${size}G
+n
+
+
+
+w
+EOF
+
+partprobe "$hd"
