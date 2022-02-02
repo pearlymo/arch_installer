@@ -14,3 +14,7 @@ Are you sure?" 15 60 || exit
 
 dialog --no-cancel --inputbox "Enter a name for your computer." \
 10 60 2> comp
+
+# Verify boot (UEFI or BIOS)
+uefi=0
+ls /sys/firmware/efi/efivars 2> /dev/null && uefi=1
