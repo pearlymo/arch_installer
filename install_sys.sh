@@ -127,3 +127,12 @@ fi
 # Install Arch Linux!
 pacstrap /mnt base base-devel linux linux-firmware
 genfstab -U /mnt >> /mnt/etc/fstab
+
+curl https://raw.githubusercontent.com/mothighimire/arch_installer/master/install_chroot.sh > /mnt/install_chroot.sh
+
+arch-chroot /mnt bash install_chroot.sh
+
+rm /mnt/var_uefi
+rm /mnt/var_hd
+rm /mnt/install_chroot.sh
+rm /mnt/comp
