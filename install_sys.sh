@@ -136,3 +136,14 @@ rm /mnt/var_uefi
 rm /mnt/var_hd
 rm /mnt/install_chroot.sh
 rm /mnt/comp
+
+dialog --title "To reboot or not to reboot?" --yesno \
+"Congrats! The install is done! \n\n\
+Do you want to reboot your computer?" 20 60
+
+response=$?
+
+case $response in
+    0) reboot;;
+    1) clear;;
+esac
