@@ -108,3 +108,16 @@ w
 EOF
 
 partprobe "$hd"
+
+# Format the partitions
+
+mkswap "${hd}2"
+swapon "${hd}2"
+mkfs.ext4 "${hd}3"
+mount "${hd}3" /mnt
+
+if [ "$uefi" = 1 ]; then
+    mkfs.fat -F32 "${hd}1"
+    mkdir -p /mnt/boot/efi
+    mount "${hd}1" /mnt/boot/efi
+fi
