@@ -6,7 +6,7 @@ Use a Virtual Machine first to test if the scripts are running properly.
 
 ## Fetch Script
 
-After booting Arch Linux from an installation media, check network connection. If connected to the internet, run the following command to fetch the first installation script - 
+After booting Arch Linux with an bootable medium, check network connection. If connected to the internet, run the following command to fetch the installation script - 
 
 ```
 curl -LO https://raw.githubusercontent.com/mothighimire/arch_installer/master/install_sys.h
@@ -14,7 +14,7 @@ curl -LO https://raw.githubusercontent.com/mothighimire/arch_installer/master/in
 
 ## Start Installation
 
-Run the script with the following command-
+Run the installation script with the following command -
 
 ```
 bash install_sys.h
