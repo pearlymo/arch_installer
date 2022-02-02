@@ -73,3 +73,10 @@ echo "$packages" | while read -r line; do
         systemctl enable NetworkManager.service
     fi
 done
+
+echo "%wheel ALL=(ALL) ALL" >> /etc/sudoers
+
+curl https://raw.githubusercontent.com/mothighimire/arch_installer/master/install_user.sh > /tmp/install_user.sh;
+
+# Switch user and run the final script
+sudo -u "$name" sh /tmp/install_user.sh
