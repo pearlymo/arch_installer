@@ -39,3 +39,11 @@ do
     10 60
     aur_check "$line"
 done
+
+DOTFILES="/home/$(whoami)/dotfiles"
+if [ ! -d "$DOTFILES" ]; then
+    git clone https://github.com/mothighimire/dotfiles.git "$DOTFILES" >/dev/null
+fi
+
+source "$DOTFILES/zsh/.zshenv"
+cd "$DOTFILES" && bash install.sh
