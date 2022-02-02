@@ -7,7 +7,7 @@ apps_path="/tmp/apps.csv"
 curl https://raw.githubusercontent.com/mothighimire/arch_installer/master/apps.csv > $apps_path
 
 dialog --title "Welcome!" \
---msgbox "Welcome to the install script for your apps and dotfiles!" \
+--msgbox "Installing applications and dotfiles" \
     10 60
 
 # Allow the user to select the group of packages he (or she) wants to install.
@@ -27,8 +27,8 @@ apps=("essential" "Essentials" on
       "lynx" "Lynx (browser)" off)
 
 dialog --checklist \
-"You can now choose what group of application you want to install. \n\n\
-You can select an option with SPACE and valid your choices with ENTER." \
+"Choose what group of application you want to install. \n\n\
+You can select an option with SPACE and validate your choices with ENTER." \
 0 0 0 \
 "${apps[@]}" 2> app_choices
 choices=$(cat app_choices) && rm app_choices
@@ -47,8 +47,8 @@ rm -f /tmp/aur_queue
 
 rm -f /tmp/aur_queue
 
-dialog --title "Let's go!" --msgbox \
-"The system will now install everything you need.\n\n\
+dialog --title "Installation starting" --msgbox \
+"The system will now install selected applications.\n\n\
 It will take some time.\n\n " \
 13 60
 

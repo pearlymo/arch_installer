@@ -67,12 +67,12 @@ function config_user() {
 }
 
 dialog --title "root password" \
-    --msgbox "It's time to add a password for the root user" \
+    --msgbox "Add a password for the root user" \
     10 60
 config_user root
 
 dialog --title "Add User" \
-    --msgbox "Let's create another user." \
+    --msgbox "Create another user." \
     10 60
 config_user
 
@@ -80,7 +80,7 @@ echo "$name" > /tmp/user_name
 
 # Ask to install all your apps / dotfiles.
 dialog --title "Continue installation" --yesno \
-"Do you want to install all your apps and your dotfiles?" \
+"Do you want to install all your applications and your dotfiles?" \
 10 60 \
 && curl https://raw.githubusercontent.com/mothighimire/arch_installer/master/install_apps.sh > /tmp/install_apps.sh \
 && bash /tmp/install_apps.sh
