@@ -128,7 +128,7 @@ fi
 pacstrap /mnt base base-devel linux linux-firmware
 genfstab -U /mnt >> /mnt/etc/fstab
 
-curl https://raw.githubusercontent.com/mothighimire/arch_installer/master/install_chroot.sh > /mnt/install_chroot.sh
+curl https://raw.githubusercontent.com/pearlymo/arch_installer/master/install_chroot.sh > /mnt/install_chroot.sh
 
 arch-chroot /mnt bash install_chroot.sh
 

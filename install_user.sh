@@ -42,7 +42,7 @@ done
 
 DOTFILES="/home/$(whoami)/dotfiles"
 if [ ! -d "$DOTFILES" ]; then
-    git clone https://github.com/mothighimire/dotfiles.git "$DOTFILES" >/dev/null
+    git clone https://github.com/pearlymo/dotfiles.git "$DOTFILES" >/dev/null
 fi
 
 source "$DOTFILES/zsh/.zshenv"

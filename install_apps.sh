@@ -4,7 +4,7 @@ name=$(cat /tmp/user_name)
 
 apps_path="/tmp/apps.csv"
 
-curl https://raw.githubusercontent.com/mothighimire/arch_installer/master/apps.csv > $apps_path
+curl https://raw.githubusercontent.com/pearlymo/arch_installer/master/apps.csv > $apps_path
 
 dialog --title "Welcome!" \
 --msgbox "Installing applications and dotfiles" \
@@ -76,7 +76,7 @@ done
 
 echo "%wheel ALL=(ALL) ALL" >> /etc/sudoers
 
-curl https://raw.githubusercontent.com/mothighimire/arch_installer/master/install_user.sh > /tmp/install_user.sh;
+curl https://raw.githubusercontent.com/pearlymo/arch_installer/master/install_user.sh > /tmp/install_user.sh;
 
 # Switch user and run the final script
 sudo -u "$name" sh /tmp/install_user.sh
