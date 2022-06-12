@@ -3,7 +3,7 @@
 mkdir -p "/home/$(whoami)/Documents"
 mkdir -p "/home/$(whoami)/Downloads"
 
-# Function able to install any package from the AUR (needs the package names as arguments).
+# Install packages from AUR (needs package names as arguments).
 aur_install() {
     curl -O "https://aur.archlinux.org/cgit/aur.git/snapshot/$1.tar.gz" \
     && tar -xvf "$1.tar.gz" \
@@ -35,7 +35,7 @@ cat /tmp/aur_queue | while read -r line
 do
     c=$(( "$c" + 1 ))
     dialog --infobox \
-    "AUR install - Downloading and installing program $c out of $count: $line..." \
+    "AUR - Downloading and installing program $c out of $count: $line..." \
     10 60
     aur_check "$line"
 done
