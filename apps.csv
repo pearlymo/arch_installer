@@ -8,6 +8,7 @@ tools,rsync,Synchronizing files across computers
 tools,arandr,xrandr GUI
 tools,xsel,Manipulate the X selection
 tools,fzf,Command line fuzzy finder
+tools,the_silver_searcher,Code searching tool similar to Ack, but faster
 tools,scrot,Screenshot software
 tools,udiskie,Automount devices
 tools,lxappearance,Theme switcher for GTK+
