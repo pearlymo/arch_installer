@@ -36,5 +36,9 @@ neovim,nodejs-neovim,Nodejs for neovim (AUR)
 urxvt,rxvt-unicode,Terminal Urxvt
 urxvt,urxvt-tabbedex-mina86-git,Improved tabs for Urxvt (AUR)
 urxvt,urxvt-font-size-gt,On-the-fly URxvt font size adjustments
+python,flake8,The modular source code checker: pep8, pyflakes and co
+python,python-pylint,Analyzes Python code looking for bugs and signs of poor quality
+python,yapf,Python style guide checker
+python,autopep8,A tool that automatically formats Python code to conform to the PEP 8 style guide
 firefox,firefox,Browser Firefox
 lynx,lynx,Text-based browser
